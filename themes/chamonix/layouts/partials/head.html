@@ -1,0 +1,60 @@
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Language" content="{{ .Site.Language.Lang }}">
+
+  {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+  <meta name="description" content="{{ .Description | default (.Summary | default .Site.Params.description ) }}">
+  <meta name="keywords" content="{{ (delimit .Keywords ",") | default .Site.Params.keywords }}">
+
+  {{ template "_internal/twitter_cards.html" . }}
+  {{ template "_internal/opengraph.html" . }}
+
+  {{ if .Permalink }}
+    <base href="{{ .Permalink }}">
+  {{ end }}
+  <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+
+  {{ if .Permalink }}
+    <link rel="canonical" href="{{ .Permalink }}">
+  {{ end }}
+
+  <link rel="stylesheet" href="https://use.typekit.net/nzi3wzg.css">
+  <link href="https://fonts.googleapis.com/css?family=Archivo:400,500,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700%7CAmatic+SC:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+
+  {{ if .Site.IsServer }}
+    {{ $cssOpts := (dict "targetPath" "css/chamonix.css" "enableSourceMap" true ) }}
+    {{ $styles := resources.Get "scss/chamonix.scss" | resources.ExecuteAsTemplate "style.chamonix.css" . | toCSS $cssOpts }}
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" media="screen">
+  {{ else }}
+    {{ $cssOpts := (dict "targetPath" "css/chamonix.css" ) }}
+    {{ $styles := resources.Get "scss/chamonix.scss" | resources.ExecuteAsTemplate "style.chamonix.css" . | toCSS $cssOpts | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" crossorigin="anonymous" media="screen" />
+  {{ end }}
+
+  {{ if  or (eq .Site.Params.colorscheme "auto") (eq .Site.Params.colorscheme "dark") }}
+    {{ if .Site.IsServer }}
+      {{ $cssOpts := (dict "targetPath" "css/chamonix-dark.css" "enableSourceMap" true ) }}
+      {{ $styles := resources.Get "scss/chamonix-dark.scss" | resources.ExecuteAsTemplate "style.chamonix-dark.css" . | toCSS $cssOpts }}
+      <link rel="stylesheet" href="{{ $styles.RelPermalink }}" media="screen">
+    {{ else }}
+      {{ $cssOpts := (dict "targetPath" "css/chamonix-dark.css" ) }}
+      {{ $styles := resources.Get "scss/chamonix-dark.scss" | resources.ExecuteAsTemplate "style.chamonix-dark.css" . | toCSS $cssOpts | minify | fingerprint }}
+      <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" crossorigin="anonymous" media="screen" />
+    {{ end }}
+  {{ end }}
+
+  <link rel="icon" type="image/png" href="{{ .Site.Params.favicon_32 | default "/images/favicon-32x32.png" | absURL }}" sizes="32x32">
+  <link rel="icon" type="image/png" href="{{ .Site.Params.favicon_16 | default "/images/favicon-16x16.png" | absURL }}" sizes="16x16">
+
+  <link rel="apple-touch-icon" href="{{ .Site.Params.touchicon | default "/images/apple-touch-icon.png" | absURL }}">
+  <link rel="apple-touch-icon"  sizes="180x180" href="{{ .Site.Params.touchicon | default "/images/apple-touch-icon.png" | absURL }}">
+
+  {{ range .AlternativeOutputFormats -}}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+  {{ end -}}
+
+  {{ hugo.Generator }}
+</head>

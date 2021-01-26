@@ -1,0 +1,15 @@
+<section class="container">
+  <article>
+    <header>
+      {{ $img := (.Resources.ByType "image").GetMatch "*featured*" }}
+      {{ with $img }}
+      {{ $big := .Fill "1024x512 q100 center" }}
+      {{ $small := $big.Resize "512x q100" }}
+        <img srcset="{{ $small.RelPermalink }} 1x, {{ $big.RelPermalink }} 2x" alt="{{ $img.Title }}" width="{{ $big.Width }}"  class="mw-100 b--light-gray ba">
+      {{ end }}
+      <h1 class="title">{{ .Title }}</h1>
+      {{ partial "metadata.html" . }}
+    </header>
+    {{ .Content }}
+  </article>
+</section>

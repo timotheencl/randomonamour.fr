@@ -1,0 +1,20 @@
+
+<section class="container">
+  <nav class="navbar">
+    <section class="brand">
+      <a href="{{ .Site.BaseURL }}">
+        <img class="logo" src="{{ "/images/logo.png" | absURL }}" alt="logo {{ .Site.Title }}">
+        <span class="title">{{ .Site.Title }}</span>
+      </a>
+    </section>
+    <section class="nav-links">
+      {{ range .Site.Menus.top }}
+      <a class="nav-link" href="{{ .URL }}">
+      {{ $text := print .Name | safeHTML }}
+      {{ $text }}
+      </a>
+      {{ end }}
+    </section>
+    </nav>
+
+  </section>

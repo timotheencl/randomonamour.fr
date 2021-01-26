@@ -1,0 +1,157 @@
+// -----------------------------------------------------------------------------
+// Typography
+// -----------------------------------------------------------------------------
+
+body {
+  color: $text-color;
+  background-color: $background-color;
+	font-family: $text-font-family;
+	font-size: 1em;
+	font-weight: 400;
+  @media only screen and (max-width : 768px) {
+    font-size: 1.2em;
+    line-height: 1.5em;
+  }
+}
+
+p {
+  margin: 2.0rem 0 2.0rem 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font-family;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 6.4rem 0 3.2rem 0;
+}
+
+h1 {
+  font-weight: 700;;
+  font-size: 2.2rem;
+  line-height: 2.6rem;
+  @media only screen and (max-width : 768px) {
+    font-size: 2rem;
+    line-height: 2.4rem;
+  }
+}
+h2 {
+  font-size: 2rem;
+  line-height: 2.4rem;
+  @media only screen and (max-width : 768px) {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+  }
+}
+h3 {
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  @media only screen and (max-width : 768px) {
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+}
+h4 {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  @media only screen and (max-width : 768px) {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  }
+}
+h5 {
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  @media only screen and (max-width : 768px) {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+  }
+}
+h6 {
+  font-size: 1.2rem;
+  line-height: 2rem;
+  @media only screen and (max-width : 768px) {
+    font-size: 1rem;
+    line-height: 1.2rem;
+  }
+}
+
+b, strong {
+  font-weight: 700;
+}
+
+.highlight > div,
+.highlight > pre {
+  margin: 0 0 2rem;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+pre {
+  display: block;
+  font-family: $code-font-family;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.6rem;
+  overflow-x: auto;
+  margin: 0;
+  code {
+    display: inline-block;
+    background-color: inherit;
+    color: inherit;
+  }
+}
+
+code {
+  font-family: $code-font-family;
+  font-size: 1.6rem;
+  font-weight: 400;
+  background-color: $background-color-alt;
+  color: $text-color;
+}
+
+blockquote {
+  border-left: 2px solid $background-color-alt;
+  padding-left: 2.0rem;
+  line-height: 2.2rem;
+  font-weight: 400;
+  font-style: italic;
+}
+
+th, td {
+  padding: 1.6rem;
+}
+table {
+  border-collapse: collapse;
+}
+table td, table th {
+  border: 2px solid $background-color-alt;
+}
+table tr:first-child th {
+  border-top: 0;
+}
+table tr:last-child td {
+  border-bottom: 0;
+}
+table tr td:first-child,
+table tr th:first-child {
+  border-left: 0;
+}
+table tr td:last-child,
+table tr th:last-child {
+  border-right: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+figure {
+  text-align: center;
+}

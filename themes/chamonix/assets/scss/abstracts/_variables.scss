@@ -1,0 +1,31 @@
+// -----------------------------------------------------------------------------
+// Variables
+// -----------------------------------------------------------------------------
+
+/**
+ * Typography
+ */
+$text-font-family: futura-pt, sans-serif;
+$heading-font-family: futura-pt, sans-serif;
+$brand-font-family: annabelle, sans-serif;
+$navigation-font-family: futura-pt, sans-serif;
+$code-font-family: 'Source Code Pro', 'Lucida Console', monospace;
+
+/**
+ * Default colors
+ */
+$background-color: white !default;
+$background-color-alt: grey !default;
+$text-color: rgb(20, 20, 20) !default;
+$text-color-alt: rgb(29, 29, 29) !default;
+$link-color: #242424 !default;
+$menu-color: rgb(80, 80, 80);
+
+/**
+ * Dark colors
+ */
+ $background-color-dark: black !default;
+ $background-color-alt-dark: rgb(68, 68, 68) !default;
+ $text-color-dark: white !default;
+ $text-color-dark: rgb(209, 209, 209) !default;
+ $link-color-dark: #e613a6 !default;

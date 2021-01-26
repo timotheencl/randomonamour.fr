@@ -1,0 +1,23 @@
+// -----------------------------------------------------------------------------
+// General
+// -----------------------------------------------------------------------------
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+	box-sizing: inherit;
+}
+
+a {
+  color: $link-color;
+  @include transition(color 0.3s ease);
+  text-decoration: none;
+
+  @include on-event {
+    color: lighten($link-color, 25%);
+  }
+}
