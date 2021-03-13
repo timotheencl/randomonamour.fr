@@ -1,0 +1,26 @@
+// -----------------------------------------------------------------------------
+// Figures
+// -----------------------------------------------------------------------------
+
+figure {
+  padding-top: 40px;
+  overflow: visible;
+  width: 1200px;
+  margin-left: 50%;
+  @include transform(translateX(-50%));
+  figcaption {
+    p { margin: 1.0rem 0;}
+  }
+}
+
+.horizontal {
+  .figure-flex {
+    display: flex;
+    justify-content: space-between;
+    img {
+      width: 49%;
+      height: 100%;
+    }
+    
+  }
+}

@@ -19,13 +19,20 @@ $background-color-alt: grey !default;
 $text-color: rgb(20, 20, 20) !default;
 $text-color-alt: rgb(29, 29, 29) !default;
 $link-color: #242424 !default;
-$menu-color: rgb(80, 80, 80);
+$menu-color: rgb(80, 80, 80) !default;
+$tag-color: rgb(50, 50, 50) !default;
+$btn-color: white !default;
+$btn-background-color: rgb(20, 20, 20) !default;
 
 /**
  * Dark colors
  */
- $background-color-dark: black !default;
- $background-color-alt-dark: rgb(68, 68, 68) !default;
- $text-color-dark: white !default;
- $text-color-dark: rgb(209, 209, 209) !default;
- $link-color-dark: #e613a6 !default;
+$background-color-dark: black !default;
+$background-color-alt-dark: rgb(68, 68, 68) !default;
+$text-color-dark: white !default;
+$text-color-dark: rgb(209, 209, 209) !default;
+$link-color-dark: #e613a6 !default;
+$menu-color-dark: rgb(150, 150, 150) !default;
+$tag-color-dark: rgb(150, 150, 150) !default;
+$btn-color-dark: rgb(150, 150, 150) !default;
+$btn-background-color-dark: rgb(150, 150, 150) !default;

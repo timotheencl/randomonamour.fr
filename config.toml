@@ -9,14 +9,14 @@ theme = "chamonix"
 
   [[params.social]]
     name = "instagram"
-    url = "https://instagram.com/"
+    url = "https://instagram.com/randomonamour"
 
 
 [menu]
 
   [[menu.top]]
     name = "Blog"
-    url = "/posts/"
+    url = "/blog/"
     weight = 1
 
   [[menu.top]]
@@ -29,3 +29,7 @@ theme = "chamonix"
     url = "/contact/"
     weight = 3
 
+[imaging]
+resampleFilter = "lanczos"
+quality = 80
+anchor = "smart"

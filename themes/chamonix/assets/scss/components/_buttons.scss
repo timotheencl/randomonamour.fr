@@ -1,0 +1,13 @@
+
+// -----------------------------------------------------------------------------
+// Buttons
+// -----------------------------------------------------------------------------
+
+.btn {
+  color: $btn-color;
+  background-color: $btn-background-color;
+  border: 0;
+  line-height: 1em;
+  
+  @include border-radius(0); 
+}

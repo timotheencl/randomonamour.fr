@@ -1,0 +1,13 @@
+{{ $img := (.Resources.ByType "image").GetMatch "*featured*" }}
+{{ with $img }}
+{{ $large := .Fill "2400x600" }}
+{{ $medium := $large.Resize "1200x300" }}
+{{ $small := $large.Resize "600x150" }}
+{{ $tiny := $large.Resize "300x75" }}
+<img
+  itemprop="image"
+  sizes="100vw"
+  srcset="{{ $tiny.RelPermalink }} 300w, {{ $small.RelPermalink }} 600w, {{ $medium.RelPermalink }} 1200w, {{ $large.RelPermalink }} 2400w"
+  src="{{ $medium.RelPermalink }}"
+  alt="{{ $img.Title }}" />
+{{ end }}

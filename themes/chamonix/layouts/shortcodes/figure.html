@@ -1,0 +1,8 @@
+<figure {{ with .Get "class" }}class="{{.}}"{{ end }}>
+  <div class="figure-flex">
+    {{.Inner}}
+  </div>
+    <figcaption>
+      <p>{{ .Get "figcaption" }}</p>
+  </figcaption>
+</figure>

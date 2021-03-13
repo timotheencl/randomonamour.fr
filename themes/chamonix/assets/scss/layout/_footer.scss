@@ -1,0 +1,13 @@
+footer {
+  .container {
+    max-width: 1024px;
+    margin: 0 auto;
+    font-family: $navigation-font-family;
+    font-size: 0.9rem;
+    color: $text-color-alt;
+
+    .text-main {
+      text-align: center;
+    }
+  }
+}
