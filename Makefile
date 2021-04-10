@@ -4,6 +4,10 @@ HUGO := hugo
 PUBLIC_DIR := public/
 RESOURCES_DIR := resources/
 
+.PHONY: build
+build:         ## Build website for production
+	$(HUGO) --minify -d $(PUBLIC_DIR)
+
 .PHONY: watch
 watch:         ## Build and watch for changed files
 	$(HUGO) server --watch --buildDrafts -d $(PUBLIC_DIR)
