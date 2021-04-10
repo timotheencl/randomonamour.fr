@@ -20,10 +20,10 @@ jobs:
           hugo-version: "0.82.0"
           extended: true
 
-      - name: ⚙ Build website
+      - name: 👷 Build website
         run: hugo --minify
 
-      - name: ⚡ Upload files to server
+      - name: 📡 Upload files to server
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
           server: ${{ secrets.ftp_server }}
