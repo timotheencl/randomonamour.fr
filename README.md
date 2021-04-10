@@ -14,6 +14,8 @@ You will find articles and photos about our last hikings in mountains we love.
 The website is built with [Hugo](https://gohugo.io), a simple static site generator written
 in [https://golang.org](Golang) and hosted on [OVHcloud](https://www.ovhcloud.com).
 
+> **_DISCLAIMER:_** Please note that all blog posts are written in french 🇫🇷.
+
 ## Contributions
 
 If you find a mistake or bug, it would be very helpful if you open an issue, or send us an email.
