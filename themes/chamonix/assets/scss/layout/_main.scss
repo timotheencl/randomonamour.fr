@@ -1,4 +1,9 @@
+// -----------------------------------------------------------------------------
+// Main
+// -----------------------------------------------------------------------------
+
 main {
+  grid-area: main;
   .featured {
     img {
       padding: 0 30px;
@@ -25,10 +30,8 @@ main {
         font-size: 3rem;
       }
       font-weight: 700;
-
     }
     section.content {
-
       margin-top: 50px;
       font-size: 1.2em;
       line-height: 1.8em;
@@ -46,7 +49,5 @@ main {
         padding: 5px;
       }
     }
-
   }
-
 }
