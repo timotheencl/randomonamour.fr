@@ -1,5 +1,5 @@
 ---
-name: 🚀 Build and deploy website on push
+name: 🚀 Deploy
 
 on:
   push:
