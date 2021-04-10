@@ -1,6 +1,12 @@
-# randomonamour.fr
+# [randomonamour.fr](https://www.randomonamour.fr)
+
+<p align="center">
+  <img alt="randomonamour.fr logo" src="themes/chamonix/static/images/logo.png">
+</p>
 
 [![deploy](https://github.com/timotheenicolas/randomonamour.fr/actions/workflows/deploy.yml/badge.svg?branch=main)](https://github.com/timotheenicolas/randomonamour.fr/actions/workflows/deploy.yml)
+
+---
 
 This repository contains [randomonamour.fr](https://www.randomonamour.fr), a personal blog about trekking, bivouac and gear reviews.
 You will find articles and photos about our last hikings in mountains we love.
