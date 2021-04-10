@@ -12,7 +12,7 @@ This repository contains [randomonamour.fr](https://www.randomonamour.fr), a per
 You will find articles and photos about our last hikings in mountains we love.
 
 The website is built with [Hugo](https://gohugo.io), a simple static site generator written
-in [https://golang.org](Golang) and hosted on [OVHcloud](https://www.ovhcloud.com).
+in [Golang](https://golang.org) and hosted on [OVHcloud](https://www.ovhcloud.com).
 
 > **_DISCLAIMER:_** Please note that all blog posts are written in french 🇫🇷.
 
