@@ -9,7 +9,7 @@
 ---
 
 This repository contains [randomonamour.fr](https://www.randomonamour.fr), a personal blog about trekking, bivouac and gear reviews.
-You will find articles and photos about our last hikings in mountains we love.
+You will find articles and photos about our last hikes in mountains we love.
 
 The website is built with [Hugo](https://gohugo.io), a simple static site generator written
 in [Golang](https://golang.org) and hosted on [OVHcloud](https://www.ovhcloud.com).
