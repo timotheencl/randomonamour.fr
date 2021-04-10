@@ -1,7 +1,9 @@
-baseURL = "http://www.randomonamour.fr/"
+baseURL = "https://www.randomonamour.fr/"
 languageCode = "fr-fr"
 title = "rando mon amour"
 theme = "chamonix"
+
+[params]
 
   [[params.social]]
     name = "facebook"
