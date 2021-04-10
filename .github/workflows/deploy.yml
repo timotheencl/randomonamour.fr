@@ -1,5 +1,5 @@
 ---
-name: 🚀 Deploy
+name: Deploy
 
 on:
   push:
