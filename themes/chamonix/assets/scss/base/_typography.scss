@@ -5,17 +5,17 @@
 body {
   color: $text-color;
   background-color: $background-color;
-	font-family: $text-font-family;
-	font-size: 1em;
-	font-weight: 400;
-  @media only screen and (max-width : 768px) {
+  font-family: $text-font-family;
+  font-size: 1em;
+  font-weight: 400;
+  @media only screen and (max-width: 768px) {
     font-size: 1.2em;
     line-height: 1.5em;
   }
 }
 
 p {
-  margin: 2.0rem 0 2.0rem 0;
+  margin: 2rem 0 2rem 0;
 }
 
 h1,
@@ -33,10 +33,10 @@ h6 {
 }
 
 h1 {
-  font-weight: 700;;
+  font-weight: 700;
   font-size: 2.2rem;
   line-height: 2.6rem;
-  @media only screen and (max-width : 768px) {
+  @media only screen and (max-width: 768px) {
     font-size: 2rem;
     line-height: 2.4rem;
   }
@@ -44,7 +44,7 @@ h1 {
 h2 {
   font-size: 2rem;
   line-height: 2.4rem;
-  @media only screen and (max-width : 768px) {
+  @media only screen and (max-width: 768px) {
     font-size: 1.8rem;
     line-height: 2.2rem;
   }
@@ -52,7 +52,7 @@ h2 {
 h3 {
   font-size: 1.8rem;
   line-height: 2.2rem;
-  @media only screen and (max-width : 768px) {
+  @media only screen and (max-width: 768px) {
     font-size: 1.6rem;
     line-height: 2rem;
   }
@@ -60,7 +60,7 @@ h3 {
 h4 {
   font-size: 1.6rem;
   line-height: 2.4rem;
-  @media only screen and (max-width : 768px) {
+  @media only screen and (max-width: 768px) {
     font-size: 1.4rem;
     line-height: 1.8rem;
   }
@@ -68,7 +68,7 @@ h4 {
 h5 {
   font-size: 1.4rem;
   line-height: 2.2rem;
-  @media only screen and (max-width : 768px) {
+  @media only screen and (max-width: 768px) {
     font-size: 1.2rem;
     line-height: 1.4rem;
   }
@@ -76,13 +76,14 @@ h5 {
 h6 {
   font-size: 1.2rem;
   line-height: 2rem;
-  @media only screen and (max-width : 768px) {
+  @media only screen and (max-width: 768px) {
     font-size: 1rem;
     line-height: 1.2rem;
   }
 }
 
-b, strong {
+b,
+strong {
   font-weight: 700;
 }
 
@@ -118,19 +119,21 @@ code {
 
 blockquote {
   border-left: 2px solid $background-color-alt;
-  padding-left: 2.0rem;
+  padding-left: 2rem;
   line-height: 2.2rem;
   font-weight: 400;
   font-style: italic;
 }
 
-th, td {
+th,
+td {
   padding: 1.6rem;
 }
 table {
   border-collapse: collapse;
 }
-table td, table th {
+table td,
+table th {
   border: 2px solid $background-color-alt;
 }
 table tr:first-child th {

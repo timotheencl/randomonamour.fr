@@ -9,7 +9,9 @@ figure {
   margin-left: 50%;
   @include transform(translateX(-50%));
   figcaption {
-    p { margin: 1.0rem 0;}
+    p {
+      margin: 1rem 0;
+    }
   }
 }
 
@@ -21,6 +23,5 @@ figure {
       width: 49%;
       height: 100%;
     }
-    
   }
 }

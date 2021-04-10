@@ -16,19 +16,19 @@
 }
 
 @mixin transition($transition...) {
-  -moz-transition:    $transition;
-  -o-transition:      $transition;
+  -moz-transition: $transition;
+  -o-transition: $transition;
   -webkit-transition: $transition;
-  transition:         $transition;
+  transition: $transition;
 }
 
 @mixin transform($transform...) {
   -webkit-transform: $transform;
-  transform:         $transform;
+  transform: $transform;
 }
 @mixin border-radius($border-radius...) {
-  -moz-border-radius:    $border-radius;
-  -o-border-radius:      $border-radius;
+  -moz-border-radius: $border-radius;
+  -o-border-radius: $border-radius;
   -webkit-border-radius: $border-radius;
-  border-radius:         $border-radius;
+  border-radius: $border-radius;
 }
