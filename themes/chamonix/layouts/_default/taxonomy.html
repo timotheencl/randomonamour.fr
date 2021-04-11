@@ -1,0 +1,7 @@
+{{ define "title" }}
+  {{- .Title }} · {{ .Site.Title -}}
+{{ end }}
+{{ define "main" }}
+  <h1 class="list-title">{{ .Title }}</h1>
+  {{ partial "list.html" . }}
+{{ end }}

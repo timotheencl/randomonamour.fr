@@ -13,12 +13,8 @@ html {
   box-sizing: inherit;
 }
 
-a {
-  color: $link-color;
-  @include transition(color 0.3s ease);
+a,
+a:link {
+  color: inherit;
   text-decoration: none;
-
-  @include on-event {
-    color: lighten($link-color, 25%);
-  }
 }

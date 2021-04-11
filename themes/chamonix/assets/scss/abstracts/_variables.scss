@@ -6,6 +6,8 @@
  * Typography
  */
 $text-font-family: futura-pt, sans-serif;
+$text-serif-font-family: temeraire, serif;
+// $text-serif-font-family: le-monde-livre-std, serif;
 $heading-font-family: futura-pt, sans-serif;
 $brand-font-family: annabelle, sans-serif;
 $navigation-font-family: futura-pt, sans-serif;
@@ -14,11 +16,13 @@ $code-font-family: "Source Code Pro", "Lucida Console", monospace;
 /**
  * Default colors
  */
-$background-color: white !default;
+$background-color: #fdfdfd !default;
 $background-color-alt: grey !default;
-$text-color: rgb(20, 20, 20) !default;
+$text-color: #373737 !default;
 $text-color-alt: rgb(29, 29, 29) !default;
-$link-color: #242424 !default;
+$title-color: #353535 !default;
+$title-color-alt: #8ac8db !default;
+$link-color: #c1ecee !default;
 $menu-color: rgb(80, 80, 80) !default;
 $tag-color: rgb(50, 50, 50) !default;
 $btn-color: white !default;
@@ -31,8 +35,23 @@ $background-color-dark: black !default;
 $background-color-alt-dark: rgb(68, 68, 68) !default;
 $text-color-dark: white !default;
 $text-color-dark: rgb(209, 209, 209) !default;
+$title-color: #eee !default;
+$title-color-alt: #8ac8db !default;
 $link-color-dark: #e613a6 !default;
 $menu-color-dark: rgb(150, 150, 150) !default;
 $tag-color-dark: rgb(150, 150, 150) !default;
 $btn-color-dark: rgb(150, 150, 150) !default;
 $btn-background-color-dark: rgb(150, 150, 150) !default;
+
+/**
+ * Border radius
+ */
+$border-radius: 15px;
+
+/**
+ * Mobile breakpoints
+ */
+$width-tablet: 768px;
+$width-laptop: 1280px;
+$max-container-width-laptop: 1000px;
+$max-container-width-tablet: 700px;

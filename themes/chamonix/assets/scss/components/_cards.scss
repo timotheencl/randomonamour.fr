@@ -1,0 +1,75 @@
+// -----------------------------------------------------------------------------
+// Cards layout
+// -----------------------------------------------------------------------------
+
+/**
+ * Cards section
+ */
+.cards {
+  margin: 0 auto 3rem auto;
+  display: grid;
+  grid-auto-rows: auto;
+  grid-gap: 2rem;
+  max-width: 90%;
+}
+
+@media (min-width: $width-tablet) {
+  .cards {
+    grid-gap: 3rem;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: $max-container-width-tablet;
+  }
+}
+
+@media (min-width: $width-laptop) {
+  .cards {
+    grid-gap: 3rem;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: $max-container-width-laptop;
+  }
+}
+
+/**
+ * Card item
+ */
+.card {
+  box-shadow: 0 7px 30px -10px rgba(150, 170, 180, 0.5);
+  @include border-radius($border-radius);
+  padding: 0.75rem;
+
+  &-image {
+    @include border-radius($border-radius / 2);
+    width: 100%;
+    height: auto;
+  }
+
+  &-content {
+    padding: 0.5rem;
+    &-tags {
+      padding: 0.5rem 0;
+      font-size: 0.8rem;
+      font-weight: 400;
+      letter-spacing: 0.08rem;
+      text-align: center;
+      text-transform: uppercase;
+      a {
+        @include link-decoration;
+      }
+    }
+    &-title {
+      line-height: 1;
+      margin: 0;
+      text-align: center;
+      a {
+        color: #2d3748;
+      }
+    }
+    &-description {
+      margin: 1rem 0 0 0;
+      font-size: 1.2rem;
+      a {
+        color: #718096;
+      }
+    }
+  }
+}

@@ -6,9 +6,9 @@
     </time>
   </div>
   <div class="tags">
-  {{ with .Params.tags }}
+  {{ with .Params.categories }}
   {{ range . }}
-  {{ $href := print (absURL "tags/") (urlize .) }}
+  {{ $href := print (absURL "categories/") (urlize .) }}
     <a class="" href="{{ $href }}">{{ . }}</a>
   {{ end }}
   {{ end }}

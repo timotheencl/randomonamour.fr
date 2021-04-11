@@ -1,0 +1,44 @@
+// -----------------------------------------------------------------------------
+// Articles
+// -----------------------------------------------------------------------------
+
+article {
+  max-width: 1000px;
+  margin: 0 auto;
+
+  a {
+    @include link-decoration;
+  }
+
+  p {
+    font-family: $text-serif-font-family;
+    font-size: 1.3rem;
+    word-break: break-word;
+    line-height: 1.8em;
+  }
+
+  header {
+    .metadata {
+      margin-top: 2rem;
+      text-align: center;
+      font-weight: 500;
+      text-transform: uppercase;
+      .datetime {
+        margin-bottom: 20px;
+        color: $text-color-alt;
+      }
+      .tags a {
+        color: $tag-color;
+      }
+    }
+    .title {
+      font-size: 4rem;
+      text-align: center;
+    }
+    font-weight: 700;
+  }
+
+  section.content {
+    margin-top: 3rem;
+  }
+}

@@ -3,15 +3,21 @@
 // -----------------------------------------------------------------------------
 
 figure {
-  padding-top: 40px;
+  padding: 1rem 0;
   overflow: visible;
   width: 1200px;
   margin-left: 50%;
   @include transform(translateX(-50%));
   figcaption {
     p {
+      font-style: italic;
+      font-family: $text-font-family;
       margin: 1rem 0;
     }
+  }
+  img {
+    box-shadow: 0 7px 30px -10px rgba(150, 170, 180, 0.5);
+    // @include border-radius($border-radius);
   }
 }
 

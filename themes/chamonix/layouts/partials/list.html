@@ -1,10 +1,35 @@
-<h1>{{ .Title }}</h1>
-{{ range .Pages.ByPublishDate.Reverse }}
-<p>
-    <h3><a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-    {{ partial "metadata.html" . }}
-    <a class="summary" href="{{ .RelPermalink }}">
-        <p>{{ .Summary }}</p>
+<div class="cards">
+  {{ range .Pages.ByPublishDate.Reverse }}
+  <div class="card">
+    <a href="{{ .RelPermalink }}">
+      {{ $img := (.Resources.ByType "image").GetMatch "*featured*" }}
+      {{ with $img }}
+      {{ $large := .Fill "720x480" }}
+      {{ $medium := $large.Resize "360x240" }}
+      {{ $small := $large.Resize "180x120" }}
+      {{ $tiny := $large.Resize "90x60" }}
+      <img
+        class="card-image"
+        itemprop="image"
+        sizes="100vw"
+        srcset="{{ $tiny.RelPermalink }} 90w, {{ $small.RelPermalink }} 180w, {{ $medium.RelPermalink }} 360w, {{ $large.RelPermalink }} 720w"
+        src="{{ $medium.RelPermalink }}"
+        alt="{{ $img.Title }}">
+      {{ end }}
     </a>
-</p>
-{{ end }}
+    <div class="card-content">
+      <div class="card-content-tags">
+      {{ with .Params.categories }}
+      {{ range . }}
+      {{ $href := print (absURL "categories/") (urlize .) }}
+        <a class="" href="{{ $href }}">{{ . }}</a>
+      {{ end }}
+      {{ end }}
+      </div>
+      <h3 class="card-content-title">
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </h3>
+    </div>
+  </div>
+  {{ end }}
+</div>

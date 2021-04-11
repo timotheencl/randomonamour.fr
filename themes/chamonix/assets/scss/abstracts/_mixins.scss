@@ -15,6 +15,17 @@
   }
 }
 
+@mixin link-decoration {
+  background-image: linear-gradient(120deg, $link-color 50%, $link-color 50%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.5rem;
+  background-position: 0 88%;
+  transition: background-size 0.25s ease-in;
+  &:hover {
+    background-size: 100% 88%;
+  }
+}
+
 @mixin transition($transition...) {
   -moz-transition: $transition;
   -o-transition: $transition;
@@ -27,7 +38,6 @@
   transform: $transform;
 }
 @mixin border-radius($border-radius...) {
-  -moz-border-radius: $border-radius;
   -o-border-radius: $border-radius;
   -webkit-border-radius: $border-radius;
   border-radius: $border-radius;

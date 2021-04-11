@@ -1,9 +1,9 @@
 {{ $img := (.Resources.ByType "image").GetMatch "*featured*" }}
 {{ with $img }}
-{{ $large := .Fill "2400x600" }}
-{{ $medium := $large.Resize "1200x300" }}
-{{ $small := $large.Resize "600x150" }}
-{{ $tiny := $large.Resize "300x75" }}
+{{ $large := .Fill "2400x1000" }}
+{{ $medium := $large.Resize "1200x500" }}
+{{ $small := $large.Resize "600x250" }}
+{{ $tiny := $large.Resize "300x175" }}
 <img
   itemprop="image"
   sizes="100vw"
