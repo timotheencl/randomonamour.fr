@@ -2,8 +2,11 @@
 // Footer
 // -----------------------------------------------------------------------------
 
-footer {
+.footer {
   grid-area: footer;
+  margin-top: 300px;
+  position: relative;
+
   .container {
     max-width: 1024px;
     margin: 0 auto;
